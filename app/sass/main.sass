@@ -1,0 +1,345 @@
+@import base
+
+// -----CONTAINER-----
+.container
+	width: 100%
+	max-width: 1200px
+	padding: 0 15px
+	margin: 0 auto
+
+	+r(1200)
+		max-width: 992px
+
+	+r(992)
+		max-width: 768px
+
+	+r(767)
+		max-width: 576px
+
+	+r(576)
+		max-width: 480px
+
+// -----BUTTON-----
+.btn
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+	height: 40px
+	font-size: 14px
+	color: $text
+	border-radius: 5px
+	max-width: fit-content
+	border: 0
+	background-color: #fdea69
+	padding: 0 50px
+
+	&:hover,
+	&:focus
+		border: 0
+		background: #fdea69
+		color: $text
+		box-shadow: 0 0 15px 0 rgba(#fdea69, 1)
+
+
+.header
+	padding: 15px 0
+	border-bottom: 2px solid rgba($accent, .18)
+
+	&__container
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__logo
+		display: flex
+		justify-content: center
+		align-items: center
+
+		+r(480)
+			flex-wrap: wrap
+			text-align: center
+
+		p
+			display: flex
+			flex-direction: column
+			margin: 0 20px
+			font-size: 16px
+			font-weight: 500
+
+			+r(992)
+				font-size: 14px
+
+			+r(480)
+				margin-bottom: 10px
+
+		b
+			text-transform: uppercase
+			color: $accent
+			font-size: 17px
+			font-weight: 500
+
+			+r(992)
+				font-size: 14px
+
+		img
+			+r(767)
+				width: 70px
+			
+			+r(480)
+				order: 1
+				margin: 0 10px
+
+
+.hero
+	padding-top: 15px
+	padding-bottom: 45px
+	text-align: center
+
+	&__container
+		max-width: 860px
+
+	&__logo
+		display: block
+		margin: 0 auto 5px
+		max-width: 100%
+
+		+r(767)
+			width: 68%
+
+	&__slider
+
+		img
+			margin-bottom: 10px
+
+			+r(767)
+				max-width: 60%
+
+		p
+			font-size: 14px
+			font-weight: 500
+
+		&_prev,
+		&_next
+			position: absolute
+			top: 40%
+			transform: translate(0, -50%)
+			width: 20px
+			height: 20px
+			outline: none
+			cursor: pointer
+			z-index: 100
+			+transition
+
+			&::before
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				border-top: 2px solid $text
+				border-left: 2px solid $text
+				+transition
+
+			&:hover,
+			&:focus
+				&::before
+					border-color: $accent
+
+		&_prev
+			left: 10px
+
+			&::before
+				transform: rotate(-45deg)
+
+		&_next
+			right: 10px
+
+			&::before
+				transform: rotate(135deg)
+
+
+.welcome
+	padding: 50px 0
+	background-color: #f5fafa
+	
+	h2
+		font-size: 35px
+		text-transform: uppercase
+		text-align: center
+		margin-bottom: 25px
+
+		+r(992)
+			font-size: 28px
+			margin-bottom: 15px
+
+		+r(767)
+			font-size: 24px
+
+		+r(480)
+			font-size: 20px
+	
+	h3
+		text-align: center
+		text-transform: uppercase
+		font-size: 18px
+		margin-bottom: 30px
+
+		+r(992)
+			font-size: 16px
+			margin-bottom: 20px
+		
+		+r(992)
+			font-size: 14px
+
+	&__subtitle
+		font-size: 18px
+		text-align: center
+		margin-bottom: 45px
+
+		+r(992)
+			font-size: 16px
+			margin-bottom: 30px
+
+		+r(480)
+			font-size: 14px
+
+		br
+			+r(767)
+				display: none
+
+	&__form
+		background-color: #fff
+		padding: 40px 60px 50px
+		max-width: 500px
+		width: 100%
+		margin: 0 auto
+		box-shadow: 0 0 15px 0 rgba($text, .3)
+
+		+r(767)
+			padding: 35px
+		
+		+r(480)
+			padding: 15px
+
+		&_line
+			margin-bottom: 20px
+
+			+r(480)
+				margin-bottom: 10px
+		
+		&_remember
+			+between
+			margin-bottom: 30px
+
+			+r(480)
+				margin-bottom: 15px
+
+			label
+				position: relative
+				padding-left: 20px
+				color: #909090
+				cursor: pointer
+				margin-bottom: 0
+				margin-right: 0
+				line-height: 1.1
+
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+
+				&::before
+					width: 15px
+					height: 15px
+					border-radius: 3px
+					border: 1px solid #909090
+
+				&::after
+					width: 9px
+					height: 9px
+					border-radius: 3px
+					border: 1px solid #909090
+					background: #909090
+					left: 3px
+					top: 3px
+					transition: all .6s
+
+			input[type="checkbox"]
+				display: none
+
+			input[type="checkbox"]:checked + label::after
+				transform: scale(1)
+
+			input[type="checkbox"] + label::after
+				transform: scale(0)
+
+		&_btn
+			display: flex
+			justify-content: center
+
+
+.footer
+	background-color: $footer
+	padding: 20px 0
+	text-align: center
+	color: rgba(#f5fafa, .55)
+	font-weight: 300
+
+
+// -----MODAL-----
+.modal
+	position: relative
+	max-width: 725px
+	width: 100%
+	height: auto
+	padding: 60px 75px 145px
+	margin: 20px 0
+	background-color: #fff
+	z-index: 1
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.29)
+	border-radius: 20px
+	border: 2px solid #273a72
+	display: none
+
+	h3
+		justify-content: flex-start
+		margin-bottom: 50px
+
+	&__close
+		position: absolute
+		right: 15px
+		top: 15px
+		display: block
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		border: none
+		cursor: pointer
+		transition: all .6s
+		background-color: #fff
+
+		&:hover,
+		&:focus
+			outline: none
+			transform: rotate(90deg)
+
+			span
+				background: red
+
+		span
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			background: #273a72
+			transition: all .6s
+			border-radius: 4px
+			height: 22px
+			width: 3px
+
+			&:first-child
+				transform: translate(-50%, -50%) rotate(45deg)
+
+			&:last-child
+				transform: translate(-50%, -50%) rotate(-45deg)

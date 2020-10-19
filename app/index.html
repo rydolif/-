@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Единая система идентификации и аутентификации </title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<div class="header__logo">
+				<img src="img/header__ecia.png" alt="">
+				<p>
+					<b>Единая система идентификации и аутентификации </b>
+					<span>ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России </span>
+				</p>
+				<img src="img/header__logo.png" alt="">
+			</div>
+
+		</div>
+	</header>
+
+	<section class="hero">
+		<div class="hero__container container">
+			
+			<img src="img/hero__logo.png" alt="" class="hero__logo">
+
+			<div class="hero__slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="hero__slider_item swiper-slide">
+						<img src="img/hero__item1.png" alt="">
+						<p>Электронная библиотека</p>
+					</div>
+					<div class="hero__slider_item swiper-slide">
+						<img src="img/hero__item2.png" alt="">
+						<p>Система электронного журнала</p>
+					</div>
+					<div class="hero__slider_item swiper-slide">
+						<img src="img/hero__item3.png" alt="">
+						<p>Портал Цифровая среда</p>
+					</div>
+				</div>
+				<div class="hero__slider_next"></div>
+				<div class="hero__slider_prev"></div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="welcome">
+		<div class="container">
+
+			<h2>Добро пожаловать </h2>
+			<p class="welcome__subtitle">
+				в Единую систему идентификации и аутентификации Цифровой среды <br>
+				ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России» 
+			</p>
+
+			<form class="welcome__form">
+				<h3>Введите логин и пароль</h3>
+				<div class="welcome__form_line">
+					<input type="text" name="login" placeholder="Ваш логин">
+				</div>
+				<div class="welcome__form_line">
+					<input type="password" name="password" placeholder="Ваш пароль">
+				</div>
+				<div class="welcome__form_remember">
+					<a href="#">Не можете войти?</a>
+					<p>
+						<input type="checkbox" id="remember">
+						<label for="remember">Запомнить меня</label>
+					</p>
+				</div>
+				<div class="welcome__form_btn">
+					<button class="btn">Войти в систему</button>
+				</div>
+			</form>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<p>«Цифровая среда ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России» </p>
+		</div>
+	</footer>
+
+	<div class="modal modal--services">
+		<form action="sendmail.php" class="modal__form form" method="post">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2 class="modal__title">Оставьте заявку на <br>услугу</h2>
+			<input type="hidden" name="subject" value="Оставьте заявку на услугу">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Имя" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Телефон" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal modal--thanks">
+		<button class="close thanks_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Спасибо за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+</body>
+</html>
