@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Cоздание нового пользователя</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<div class="header__logo">
+				<img src="img/header__ecia.png" alt="">
+				<p>
+					<b>Единая система идентификации и аутентификации </b>
+					<span>ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России </span>
+				</p>
+				<img src="img/header__logo.png" alt="">
+			</div>
+
+			<div class="header__nav">
+				<div class="header__nav_login">
+					<div class="header__nav_icon">
+						<img src="img/favicon.png" alt="">
+					</div>
+					<div>
+						<p><b>Иванов</b></p>
+						<p>Алексей Александрович</p>
+					</div>
+					<ul>
+						<li><a href="#">Управление пользователями и группами</a></li>
+						<li><a href="#">Журнал синхронихации данных</a></li>
+						<li><a href="#">Журнал событий</a></li>
+						<li><a href="#">Управление подключенными сайтами</a></li>
+						<li><a href="#">Выход</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<section class="new-user journal">
+		<div class="container">
+
+			<div class="journal__crumbs">
+				<a href="#">Главная</a>
+				<span> / </span>
+				<a href="#">Управление пользователями </a>
+				<span> / </span>
+				<p>Создание нового пользователя</p>
+			</div>
+			<h2>Cоздание нового пользователя</h2>
+			
+			<form class="new-user__form">
+				<div class="new-user__line">
+					<label for="select">Группа</label>
+					<select name="select" id="select">
+						<option value="Верхний уровень">Верхний уровень</option>
+						<option value="Средний уровень">Средний уровень</option>
+						<option value="Низкий уровень">Низкий уровень</option>
+					</select>
+				</div>
+				<div class="new-user__line">
+					<label for="name">ФИО пользователя</label>
+					<input type="text" name="name" id="name" placeholder="Введите название">
+				</div>
+				<div class="new-user__line">
+					<label for="login">Логин</label>
+					<input type="text" name="login" id="login" placeholder="Введите название">
+				</div>
+				<div class="new-user__line">
+					<label for="pass">Пароль</label>
+					<input type="password" name="pass" id="pass" placeholder="Оставьте поле пустым, чтобы не изменять пароль">
+				</div>
+				<div class="new-user__line">
+					<label for="mail">E-mail</label>
+					<input type="mail" name="pass" id="mail" placeholder="Введите">
+				</div>
+				<div class="new-user__line">
+					<label for="type">Тип пользователя</label>
+					<select name="type" id="type">
+						<option value="Выберите тип пользователя">Выберите тип пользователя</option>
+						<option value="Пользователь 1">Пользователь 1</option>
+						<option value="Пользователь 2">Пользователь 2</option>
+						<option value="Пользователь 3">Пользователь 3</option>
+					</select>
+				</div>
+				<div class="new-user__btn">
+					<button class="btn btn--blue">Сохранить</button>
+				</div>
+			</form>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<p>«Цифровая среда ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России» </p>
+		</div>
+	</footer>
+
+	<div class="modal modal--services">
+		<form action="sendmail.php" class="modal__form form" method="post">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2 class="modal__title">Оставьте заявку на <br>услугу</h2>
+			<input type="hidden" name="subject" value="Оставьте заявку на услугу">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Имя" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Телефон" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal modal--thanks">
+		<button class="close thanks_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Спасибо за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+</body>
+</html>
