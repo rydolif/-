@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<title>Подключенные сайты</title>
+	<meta name="description" content="Startup HTML Optimized">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" href="img/favicon.png">
+	<meta property="og:image" content="img/preview.jpg">
+	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<script src="js/app.min.js" defer></script>
+
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="header__container container">
+
+			<div class="header__logo">
+				<img src="img/header__ecia.png" alt="">
+				<p>
+					<b>Единая система идентификации и аутентификации </b>
+					<span>ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России </span>
+				</p>
+				<img src="img/header__logo.png" alt="">
+			</div>
+
+			<div class="header__nav">
+				<div class="header__nav_login">
+					<div class="header__nav_icon">
+						<img src="img/favicon.png" alt="">
+					</div>
+					<div>
+						<p><b>Иванов</b></p>
+						<p>Алексей Александрович</p>
+					</div>
+					<ul>
+						<li><a href="#">Управление пользователями и группами</a></li>
+						<li><a href="#">Журнал синхронихации данных</a></li>
+						<li><a href="#">Журнал событий</a></li>
+						<li><a href="#">Управление подключенными сайтами</a></li>
+						<li><a href="#">Выход</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+	</header>
+
+	<section class="journal">
+		<div class="container">
+
+			<div class="journal__crumbs">
+				<a href="#">Главная</a>
+				<span> / </span>
+				<p>Подключенные сайты</p>
+			</div>
+
+			<h2>Подключенные сайты</h2>
+
+			<p class="journal__pagination">
+				Показаны записи <b>1-14</b> из 14
+			</p>
+
+			<div class="journal__btn">
+				<a href="#" class="btn btn--blue">Добавить новый сайт</a>
+			</div>
+			
+			<form class="journal__site journal__form">
+
+				<p>#</p>
+				<p>Ключ - подключеннные сайты</p>
+				<p>Понятное наименование</p>
+				<p>Адрес сайта</p>
+				<p>Активен</p>
+
+				<p></p>
+				<p><input type="text"></p>
+				<p><input type="text"></p>
+				<p><input type="text"></p>
+				<p><input type="text"></p>
+				
+			</form>
+
+			<div class="journal__list">
+
+				<div class="journal__white journal__list_item">
+					<div class="journal__list_header">
+						<p>1</p>
+						<p><span>Library</span></p>
+						<p>Цифровая среда</p>
+						<p>http/ 67767/99;/8688</p>
+						<p>
+							<b>Да</b>
+							<img src="img/journal__list_item2.png" alt="">
+						</p>
+					</div>
+				</div>
+
+				<div class="journal__white journal__list_item">
+					<div class="journal__list_header">
+						<p>2</p>
+						<p><span>Library</span></p>
+						<p>Цифровая среда</p>
+						<p>http/ 67767/99;/8688</p>
+						<p>
+							<b>Да</b>
+							<img src="img/journal__list_item2.png" alt="">
+						</p>
+					</div>
+				</div>
+
+				<div class="journal__white journal__list_item">
+					<div class="journal__list_header">
+						<p>3</p>
+						<p><span>Library</span></p>
+						<p>Цифровая среда</p>
+						<p>http/ 67767/99;/8688</p>
+						<p>
+							<b>Да</b>
+							<img src="img/journal__list_item2.png" alt="">
+						</p>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<footer class="footer">
+		<div class="footer__container container">
+			<p>«Цифровая среда ФГБОУ ВО Ивановской пожарно-спасательной академии ГПС МЧС России» </p>
+		</div>
+	</footer>
+
+	<div class="modal modal--services">
+		<form action="sendmail.php" class="modal__form form" method="post">
+
+			<button class="close modal__close" type="button">
+				<span></span>
+				<span></span>
+			</button>
+
+			<h2 class="modal__title">Оставьте заявку на <br>услугу</h2>
+			<input type="hidden" name="subject" value="Оставьте заявку на услугу">
+
+			<div class="modal__line">
+				<input type="text" name="name" placeholder="Имя" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<input type="tel" name="phone" placeholder="Телефон" class="modal__input" required>
+			</div>
+			<div class="modal__line">
+				<button type="submit" class="modal__btn" name="submit">Отправить</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal modal--thanks">
+		<button class="close thanks_close" type="button">
+			<span></span>
+			<span></span>
+		</button>
+		<h3>Спасибо за доверие!</h3>
+		<p>Мы обязательно с вами свяжемся!</p>
+	</div>
+
+</body>
+</html>
