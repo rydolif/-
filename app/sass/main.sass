@@ -423,7 +423,8 @@
 		grid-gap: 1px
 		box-shadow: 0 0 15px 0 rgba($text, .2)
 		background-color: #e8e8e8
-		margin-bottom: 25px
+		max-width: 815px
+		margin: 0 auto 25px
 
 		p
 			display: grid
@@ -456,6 +457,71 @@
 
 		b
 			color: $accent
+
+	&__list
+		max-width: 815px
+		margin: 0 auto
+
+		&_item
+			&:nth-child(even)
+				.journal__list_header
+					background-color: #f1fff1
+			
+			&:last-child
+				margin-bottom: 0
+
+		p
+			padding: 15px 20px
+			font-weight: 500
+			border-right: 1px solid #ededed
+
+			+r(992)
+				padding: 10px
+				font-size: 12px
+
+			+r(480)
+				font-size: 10px
+				padding: 5px
+
+			&:first-child
+				text-align: center
+
+			&:last-child
+				border: 0
+				display: flex
+				justify-content: space-between
+				align-items: center
+
+		time
+			color: $accent
+			margin-right: 15px
+
+		&_header
+			display: grid
+			grid-template-columns: .3fr 1fr 1fr 1fr 1fr
+			border: 1px solid #dae1f0
+			background-color: #fff6f6
+			margin-bottom: 10px
+			font-size: 12px
+			cursor: pointer
+		
+		&_content
+			border: 1px solid #dae1f0
+			margin-bottom: 10px
+
+			div
+				display: grid
+				grid-template-columns: 1fr 5fr
+				border-bottom: 1px solid #dae1f0
+
+				+r(992)
+					grid-template-columns: 2fr 5fr
+
+				&:nth-child(odd)
+					background-color: #fff
+
+			p
+				font-weight: 400
 
 
 .admin
